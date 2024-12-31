@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body {
+  overflow: hidden;
+  background: -webkit-linear-gradient(top, #00b2ff 0%, #3f8edd 100%);
+  height: 100vh;
+}
+
+.cards {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cards h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+.cards h2 {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 200;
+  color: #A4C9EF;
+  font-family: 'Nunito', sans-serif;
+}
+.cards_inner {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  position: relative;
+  top: 60px;
+}
+.cards_inner .wrap {
+  width: 220px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.cards_inner .invalid {
+  pointer-events: none;
+  left: -180px !important;
+  opacity: 0;
+  transition: all .23s;
+}
+.cards_inner .animate {
+  transition: all 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715);
+}
+.cards_inner .card_in {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  margin-top: 40px;
+  -webkit-animation: pop 0.6s 0.1s cubic-bezier(0.56, 1.75, 0.25, 0.715);
+          animation: pop 0.6s 0.1s cubic-bezier(0.56, 1.75, 0.25, 0.715);
+  right: 0;
+}
+@-webkit-keyframes pop {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+.cards_inner .card_in_two {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  margin-top: 40px;
+  transition: all 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715);
+  margin-top: 0px;
+}
+.cards_inner__card {
+  transition: -webkit-transform 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715);
+  transition: transform 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715);
+  transition: transform 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715), -webkit-transform 0.2s cubic-bezier(0.56, 2.15, 0.25, 0.715);
+  position: absolute;
+  margin-top: 0px;
+  left: 0;
+  right: 0;
+  background: -moz-linear-gradient(top, white 0%, #f7f7f7 100%);
+  top: 50%;
+  margin: auto;
+  width: 220px;
+  height: 130px;
+  background: -webkit-linear-gradient(top, white 0%, #f7f7f7 100%);
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.cards_inner__card:nth-of-type(1) {
+  top: 10px;
+  -webkit-transform: translateZ(-180px);
+          transform: translateZ(-180px);
+}
+.cards_inner__card:nth-of-type(2) {
+  top: 20px;
+  -webkit-transform: translateZ(-120px);
+          transform: translateZ(-120px);
+}
+.cards_inner__card:nth-of-type(3) {
+  top: 30px;
+  -webkit-transform: translateZ(-60px);
+          transform: translateZ(-60px);
+}
+.cards_inner__card:nth-of-type(4) {
+  top: 40px;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+
+.maestro .logo {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MasterCard_logo.png/640px-MasterCard_logo.png");
+}
+
+.paypal .logo {
+  background: url("https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png?01AD=3B28EURZY9Emi4KsrC-JAvZqhykcobygL70miwLcjbS3qGuX1m1ZgsQ&01RI=08D0AE0331EC9B2&01NA=");
+  left: 58px;
+  background-size: contain !important;
+  top: 49px;
+}
+
+.logo {
+  width: 100px;
+  height: 70px;
+  position: relative;
+  background-repeat: no-repeat !important;
+  left: 62px;
+  background-size: contain !important;
+  top: 29px;
+}
+
+.mastercard .logo {
+  left: 73px;
+  background-size: contain !important;
+  top: 44px;
+  width: 70px;
+  height: 70px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maestro_2016.svg/1200px-Maestro_2016.svg.png");
+}
+
+.visa .logo {
+  left: 58px;
+  background-size: contain !important;
+  top: 45px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2000px-Visa_Inc._logo.svg.png");
+}
+
+.points {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  top: 50%;
+  height: 0px;
+}
+.points .active {
+  background: #245484;
+}
+.points_point {
+  float: left;
+  width: 8px;
+  display: inline-block;
+  border-radius: 10px;
+  height: 8px;
+  background: #69AEF3;
+  margin-right: 4px;
+  position: relative;
+  top: 156px;
+  left: 26px;
+}
